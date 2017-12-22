@@ -9,7 +9,6 @@ target 'AppCenterExample' do
   pod 'AppCenter/Crashes', '~> 1.1.0'
   pod 'AppCenter/Analytics', '~> 1.1.0'
   pod 'AppCenterReactNativeShared', '~> 1.1.0'
-  pod 'CodePush', :path => '../node_modules/react-native-code-push'
 
   target 'AppCenterExampleTests' do
     inherit! :search_paths

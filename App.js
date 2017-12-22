@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Analytics from 'appcenter-analytics';
-import CodePush from "react-native-code-push";
 
-const codePushOptions = { checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME };
+const codePush = require('react-native-code-push');
+const codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
 
 class App extends Component {
     render() {
@@ -52,5 +52,5 @@ const styles = StyleSheet.create({
     }
 });
 
-App = CodePush(codePushOptions)(App);
+App = codePush(codePushOptions)(App);
 export default App;
