@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Analytics from 'appcenter-analytics';
-import Crashes from 'appcenter-crashes';
+import CodePush from "react-native-code-push";
 
-export default class App extends Component<{}> {
+const codePushOptions = { checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME };
+
+class App extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -49,3 +51,6 @@ const styles = StyleSheet.create({
         margin: 10,
     }
 });
+
+App = CodePush(codePushOptions)(App);
+export default App;
