@@ -10,7 +10,7 @@ class App extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.big}>
-                    App Center demo
+                    Code Push demo
                 </Text>
                 <Button
                     onPress={() => Analytics.trackEvent('Button tapped', { date: new Date().toString() })}
