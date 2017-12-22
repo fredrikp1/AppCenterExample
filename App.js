@@ -11,11 +11,14 @@ export default class App extends Component<{}> {
                     App Center demo
                 </Text>
                 <Button
-                    onPress={() => Analytics.trackEvent('Button tapped', { date: new Date().toString()})}
+                    onPress={() => Analytics.trackEvent('Button tapped', { date: new Date().toString() })}
                     title="Tap to track an event"
                 />
                 <Button
-                    onPress={() => Crashes.generateTestCrash()}
+                    onPress={() => {
+                        const arr = [];
+                        console.log(arr[42].doesNotExist());
+                    }}
                     title="Tap to crash the app"
                 />
             </View>
